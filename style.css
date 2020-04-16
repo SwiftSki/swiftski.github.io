@@ -11,29 +11,32 @@ table, tr, th, td {
 	color: white;
 	align: center;
 	padding: 10px;
+	zIndex: 50;
 }
 table {
-	background: rgb(20, 40, 40);
+	background: rgba(20, 40, 40, 0.5);
 	margin: auto;
 }
 th, td {
-	background: rgb(20, 20, 20);
+	background: rgba(20, 20, 20, 0.5);
 	text-align: center;
 }
 img {
 	width: 100%;
 	height: auto;
+	zIndex: 1000;
 }
 a {
 	color: #aaaaff;
+	zIndex: 100;
 }
 
-#left {
+.left {
 	width: 50%;
 	height: 100%;
 	float: left;
 }
-#right {
+.right {
 	width: 50%;
 	height: 100%;
 	float: right;

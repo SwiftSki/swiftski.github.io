@@ -3,10 +3,41 @@
 	<head>
 		<title>Why You Should Choose Linux</title>
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-jpeg"/>
-		<link rel="stylesheet" href="../style.css" />
+		<style>
+			body{
+				background: rgb(20, 20, 20);
+				color: rgb(235, 235, 235);
+			}
+			table, tr, th, td {
+				border: 1px solid white;
+				color: white;
+				align: center;
+				padding: 10px;
+			}
+			table {
+				background: rgb(20, 40, 40);
+				margin: auto;
+			}
+			th, td {
+				background: rgb(20, 20, 20);
+				text-align: center;
+			}
+			h1 {
+				text-align: center;
+			}
+
+			#left {
+				width: 50%;
+				float: left;
+			}
+			#right {
+				width: 50%;
+				float: right;
+			}
+		</style>
 	</head>
-	<body style="background-image: url('tux-on-windows-10.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
-		<div class="left">
+	<body>
+		<div id="left">
 			<h1>Why Linux is Better</h1>
 			<table>
 				<tr>
@@ -37,18 +68,10 @@
 					<td>Simple tools don't need GUIs and are light</td>
 					<td>Simple tools require a GUI and take up more space</td>
 				</tr>
-				<tr>
-					<td>Compatable with all filesystems and devices</td>
-					<td>Only compatable with filesystems and devices chosen by the producer</td>
-				</tr>
 			</table>
 		</div>
-		<div class="right">
-			<br>
-			<a href="https://linux.org">Linux official Website</a><br>
-			<a href="https://ubuntu.org">Ubuntu Official Website</a><br>
-			<a href="https://www.archlinux.org">Arch Linux Official Website</a>
+		<div id="right">
+			<div style="back">PlaceHolder</div>
 		</div>
-
 	</body>
 </html>
