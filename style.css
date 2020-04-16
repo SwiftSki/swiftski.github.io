@@ -1,0 +1,40 @@
+body {
+	color: white;
+	background: black;
+}
+h1 {
+	color: white;
+	text-align: center;
+}
+table, tr, th, td {
+	border: 1px solid white;
+	color: white;
+	align: center;
+	padding: 10px;
+}
+table {
+	background: rgb(20, 40, 40);
+	margin: auto;
+}
+th, td {
+	background: rgb(20, 20, 20);
+	text-align: center;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+a {
+	color: #aaaaff;
+}
+
+#left {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+#right {
+	width: 50%;
+	height: 100%;
+	float: right;
+}
