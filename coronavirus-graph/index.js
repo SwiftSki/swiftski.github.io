@@ -25,8 +25,9 @@ $(document).ready(function(){
 		ly.push(cases - 1);
 //		console.println(ly);
 
-		//add a modifier to translate x & y to y x,
-		points.push(ly[i] + ' ' + lx[i]);
+		//add coordinates to the graph
+		points.push(lx[i] + ',' + ly[i]);
+
 //		console.write(points);
 
 		//on geneeration <gen>, ...
@@ -48,8 +49,25 @@ $(document).ready(function(){
 	}
 
 	//draws graph
-	var line = document.createElement('polyline');
-	line.points = points;
-	line.style = 'stroke:red;stroke-width:4;';
-	document.getElementById('graph').appendChild(line);
+	var sketchProc = function(processingInstance) {
+		with (processingInstance) {
+			size(400, 400);
+			frameRate(30);
+
+			// ProgramCodeGoesHere
+	//		beginShape();
+	//		for(var i = 0; i <= points.length; i++){
+	//			curveVertex(points[i]);
+	//		}
+	//		endShape();
+			ellipse(200, 200, 50, 50);
+		}
+	};
+
+	// Get the canvas that Processing-js will use
+	var canvas = document.getElementById("graph");
+
+	// Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+	var processingInstance = new Processing(canvas, sketchProc);
+
 });

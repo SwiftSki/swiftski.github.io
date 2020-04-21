@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="index.css"/>
-		<script src='jquery-3.4.1.js'></script>
-		<script src='index.js'></script>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../style.css"/>
+		<script src="jquery-3.4.1.js"></script>
+		<script src="processing.js"></script>
+		<script src="index.js"></script>
 		<title>Corona Virus on Generation x</title>
 	</head>
 	<body>
@@ -13,8 +15,7 @@
 		<p id='output2'>1</p>
 		<p> people would be infected.</p>
 		<br>
-		<svg height="200" width="500" id="graph">
-		</svg>
+		<canvas id="graph"></canvas>
 		<br>
 		<button onclick="window.open(window.location.href);window.close();">reload</button>
 	</body>
