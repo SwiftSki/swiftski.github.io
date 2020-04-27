@@ -1,7 +1,5 @@
-$(document).ready(function(){
-	var gen2 = prompt('how many generations would you like to simulate?\nmust be a whole number');
-	//turns gen (string) into an integer
-	var gen = +gen2;
+function drawGraph(){
+	var gen = +document.getElementById("gen").value;
 	//keeps track of spread
 	var x = [1];
 	//array starts on zero, for math we need it to start on 1
@@ -12,7 +10,13 @@ $(document).ready(function(){
 	//add arrays to add points to the svg line
 	var lx = [];
 	var ly = [];
-	var points = [];
+
+	//canvas stuff
+	var ctx = document.getElementById("graph").getContext("2d");
+	ctx.beginPath();
+	ctx.lineWidth = "3";
+	ctx.strokeStyle = "red";
+	ctx.moveTo(0, 150);
 
 	while(i < y){
 		//adds another value to x, keeping track of generations and who is infected
@@ -25,20 +29,23 @@ $(document).ready(function(){
 		ly.push(cases - 1);
 //		console.println(ly);
 
-		//add coordinates to the graph
-		points.push(lx[i] + ',' + ly[i]);
-
-//		console.write(points);
+		//make variables to properly scale x & y
+		var slx = lx[i] * 10;
+		var sly = 150 - ly[i];
 
 		//on geneeration <gen>, ...
 		document.getElementById("output1").innerHTML = gen;
 		document.getElementById("comma").innerHTML = ', ';
 
+		//add the next segment to the line
+		ctx.lineTo(slx, sly);
+
 		i++;
 	}
 
 	//keeps the output as an integer
-//	cases = cases.split('.').pop();
+	cases = cases.toString();
+	cases = cases.split('.').shift();
 
 	//keeps the output simple for really large numbers
 	if(cases <= 7700000000){
@@ -49,25 +56,5 @@ $(document).ready(function(){
 	}
 
 	//draws graph
-	var sketchProc = function(processingInstance) {
-		with (processingInstance) {
-			size(400, 400);
-			frameRate(30);
-
-			// ProgramCodeGoesHere
-	//		beginShape();
-	//		for(var i = 0; i <= points.length; i++){
-	//			curveVertex(points[i]);
-	//		}
-	//		endShape();
-			ellipse(200, 200, 50, 50);
-		}
-	};
-
-	// Get the canvas that Processing-js will use
-	var canvas = document.getElementById("graph");
-
-	// Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
-	var processingInstance = new Processing(canvas, sketchProc);
-
-});
+	ctx.stroke();
+}

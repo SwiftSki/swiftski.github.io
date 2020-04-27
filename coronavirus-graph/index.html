@@ -3,12 +3,19 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="../style.css"/>
-		<script src="jquery-3.4.1.js"></script>
-		<script src="processing.js"></script>
-		<script src="index.js"></script>
+		<script src="script.js"></script>
 		<title>Corona Virus on Generation x</title>
+		<style>
+			p {
+				display: inline;
+			}
+		</style>
 	</head>
 	<body>
+		<input type="number" name="generations" placeholder="2.3" id="gen">
+		<button onclick="drawGraph()">draw graph</button>
+		<br>
+
 		<p>On generation </p>
 		<p id='output1'>0</p>
 		<p id='comma'>, </p>
