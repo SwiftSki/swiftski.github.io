@@ -1,3 +1,6 @@
+//keeps track of toggling
+var ct = 1;
+
 function takevideo(){
 	var video = document.createElement('video');
 	video.setAttribute('playsinline', '');
@@ -20,4 +23,13 @@ function takevideo(){
 	navigator.mediaDevices.getUserMedia(constraints).then(function success(stream) {
 	video.srcObject = stream;
 	});
+}
+
+function changeColor(){
+	if(ct === 1){
+		
+	}
+	if(ct === 0){
+		
+	}
 }
