@@ -132,9 +132,20 @@ var graph = {
 		}
 		//draw line
 		ctx.stroke();
-	}
+	},
 
-	pie : function(trgtId, values){}
+	pie : {
+		trgtId : trgtId,
+		ctx : document.getElementById(trgtId).getContext('2d'),
+		begin : function(){
+			ctx.beginPath();
+			ctx.lineWidth = "3";
+			ctx.strokeStyle = "red";
+			ctx.moveTo(0, document.getElementById(trgtId).height);
+		},
+		addSlice : function(){},
+		end : function(){}
+	},
 
 	points : function(){}
 

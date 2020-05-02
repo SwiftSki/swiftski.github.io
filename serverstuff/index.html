@@ -6,6 +6,10 @@
 	</head>
 	<body>
 		<canvas id="hi" height="400" width="400"></canvas>
-		<script>graph.linear("hi", 2, 10);</script>
+		<script>
+			var trgtId = 'hi';
+			graph.pie.begin('hi'); 
+			graph.pie.end();
+		</script>
 	</body>
 </html>
