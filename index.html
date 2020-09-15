@@ -10,8 +10,9 @@
 				color: #333;
 				background: black;
 				width: 100%;
+				height: 20px;
 			}
-			a: hover{
+			a : hover{
 				background: #999;
 			}
 			
@@ -28,6 +29,10 @@
 		<h1>SwiftSki's site</h1>
 		<div>
 			<a href="https://r3bels.github.io/">r3bels</a>
+			
+			<br><br>
+			
+			<button onclick="var src = prompt('url', 'https://'); var win = window.open('', 'MsgWindow', 'height=1000, width=1000, location=no'); var content = win.document.createElement('iframe');content.style.width='100%'; content.style.height='100%'; content.style.border = 'none'; content.style.position='fixed'; content.style.top='0px'; content.style.left='0px'; content.src = src; win.document.body.appendChild(content);">incognito</button>
 			<button onclick="takevideo()">camera</button>
 		</div>
 		<div id="searchBar">
