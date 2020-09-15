@@ -14,25 +14,35 @@
 			a: hover{
 				background: #999;
 			}
+			
+			#searchBar {
+				position: fixed;
+				top: 90%;
+				width: 100%;
+				textAlign: center;
+				align: center;
+			}
 		</style>
 	</head>
 	<body>
 		<h1>SwiftSki's site</h1>
-		<p>you are still welcome to check out some stuff I made</p>
-		<a href="coronavirus-graph">Coronavirus Spread Calculator[broken]</a><br>
-		<a href="linuxad">An ad I made for Linux</a>
-		<button onclick="takevideo()">camera</button>
-		<input type="text" placeholder="search google" id="search">
-		<button onclick="search()">search</button>
-		<script>
-			//https://google.com?q=word+word
-			function search(){
-				let query = document.getElementById('search').value;
-				while(query.indexOf(' ') > -1){
-				      query = query.replace(' ', '+');
+		<div>
+			<a href="https://r3bels.github.io/">r3bels</a>
+			<button onclick="takevideo()">camera</button>
+		</div>
+		<div id="searchBar">
+			<input type="text" placeholder="search google" id="search">
+			<button onclick="search()">search</button>
+			<script>
+				//https://google.com?q=word+word
+				function search(){
+					let query = document.getElementById('search').value;
+					while(query.indexOf(' ') > -1){
+					      query = query.replace(' ', '+');
+					}
+					window.open('https://google.com/search?q=' + query);
 				}
-				window.open('https://google.com/search?q=' + query);
-			}
-		</script>
+			</script>
+		</div>
 	</body>
 </html>
