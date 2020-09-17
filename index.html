@@ -70,7 +70,7 @@
 					}
 					function keyPress(event){
 						if(event.key == 'Tab') {
-							event.preventDefault();
+							event.preventDefault(); //prevents tab key from doing default focus change
 							document.getElementById('searchBox').focus();
 						}
 						if(event.key == 'Enter' && document.activeElement.id == 'searchBox') search();
