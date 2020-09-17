@@ -32,7 +32,7 @@
 			}
 		</style>
 	</head>
-	<body>
+	<body onkeydown="keyPress(event)">
 		<h1>SwiftSki's site</h1>
 		<div>
 			<a href="https://r3bels.github.io/">r3bels</a>
@@ -53,6 +53,9 @@
 						      query = query.replace(' ', '+');
 						}
 						window.open('https://google.com/search?q=' + query);
+					}
+					function keyPress(event){
+						alert(event.key);
 					}
 				</script>
 			<div>
