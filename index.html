@@ -55,8 +55,7 @@
 						window.open('https://google.com/search?q=' + query);
 					}
 					function keyPress(event){
-						alert(document.activeElement.id);
-						if(event.key == 'Enter') search();
+						if(event.key == 'Enter' && document.activeElement.id == 'search') search();
 					}
 					
 				</script>
