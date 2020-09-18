@@ -48,28 +48,33 @@
 				color: #ffffff;
 				border-radius: 5px;
 			}
+			td {
+				border: none;
+			}
 		</style>
 	</head>
 	<body onkeydown="keyPress(event)">
 		<h1>SwiftSki's site</h1>
 		<h2>I only take credit for the stuff on my subdomain</h2>
 		<div>
-			<table><td>
-				<a href="https://r3bels.github.io/">r3bels</a>
-				<a href="https://github.com">GitHub</a>
-				<a href="https://landgreen.github.io/sidescroller">landgreen's n-gon</a>
-				<a href="https://developer.mozilla.org/en-US/">Mozilla JS docs</a>
-				<a href="https://discord.js.org/#/docs/main/stable/general/welcome">discord.js docs</a>
-				<a href="https://brm.io/matter-js/docs/">Matter.js docs</a>
-				<a href="https://stackoverflow.com/">StackOverflow</a>
-				<a href="https://p5js.org/reference/">p5.js docs</a>
-				<a href="https://editor.p5js.org/">p5.js web IDE</a>
-				<a href="https://discord.com/app">Discord</a>
-			</td>
-			<td>
-				<button onclick="var src = prompt('url', 'https://');if(src != null){ var win = window.open('', 'MsgWindow', 'height=1000, width=1000, location=no'); var content = win.document.createElement('iframe');content.style.width='100%'; content.style.height='100%'; content.style.border = 'none'; content.style.position='fixed'; content.style.top='0px'; content.style.left='0px'; content.src = src; win.document.body.appendChild(content);}">incognito</button>
-				<button onclick="takevideo()">camera</button>
-			</td>
+			<table style="border: none;">
+				<td>
+					<a href="https://r3bels.github.io/">r3bels</a>
+					<a href="https://github.com">GitHub</a>
+					<a href="https://landgreen.github.io/sidescroller">landgreen's n-gon</a>
+					<a href="https://developer.mozilla.org/en-US/">Mozilla JS docs</a>
+					<a href="https://discord.js.org/#/docs/main/stable/general/welcome">discord.js docs</a>
+					<a href="https://brm.io/matter-js/docs/">Matter.js docs</a>
+					<a href="https://stackoverflow.com/">StackOverflow</a>
+					<a href="https://p5js.org/reference/">p5.js docs</a>
+					<a href="https://editor.p5js.org/">p5.js web IDE</a>
+					<a href="https://discord.com/app">Discord</a>
+				</td>
+				<td>
+					<button onclick="var src = prompt('url', 'https://');if(src != null){ var win = window.open('', 'MsgWindow', 'height=1000, width=1000, location=no'); var content = win.document.createElement('iframe');content.style.width='100%'; content.style.height='100%'; content.style.border = 'none'; content.style.position='fixed'; content.style.top='0px'; content.style.left='0px'; content.src = src; win.document.body.appendChild(content);}">incognito</button>
+					<button onclick="takevideo()">camera</button>
+				</td>
+			</table>
 		</div>
 		<div id="searchBar">
 			<h1 id="searchContainer">
