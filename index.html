@@ -82,6 +82,9 @@
 				<input type="text" placeholder="search google" id="searchBox" style="height: 40px;">
 				<button onclick="search()" style="width: 120px; height: 40px;">search</button>
 				<script>
+					window.onerror = err => {
+						alert(err);
+					}
 					function search(){
 						let query = document.getElementById('searchBox').value;
 						while(query.indexOf(' ') > -1){
