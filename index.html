@@ -82,7 +82,10 @@
 					<p>this opens a new window that cannot be tracked by goguardian, and unblocks a site</p><br>
 					
 					<a href="javascript:var xp=document.createElement('iframe');xp.id='mainiframe';xp.src=decodeURIComponent('https://' + window.document.location.href.replace('http://blocked.com-default.ws/?oI=14829618804&type=chromium-m&url=', ''));xp.style.position='fixed';xp.style.opacity='1';xp.style.top='0%';xp.style.left='0%';xp.style.height='100%';xp.style.width='100%';xp.style.border='none';xp.style.background='white';xp.style.zIndex=999;document.body.appendChild(xp);">Unblock</a>
-					<p>run this on blocked.com to unblock the site</p>
+					<p>run this on blocked.com to unblock the site</p><br>
+					
+					<a href="javascript:window.onbeforeunload = event => {  event.preventDefault();  event.returnValue = '';}">decloser</a>
+					<p>prevents goGuardian from closing tabs</p>
 					
 					<h5>These are not gerunteed to work, use them at your own risk</h5>
 				<td>
