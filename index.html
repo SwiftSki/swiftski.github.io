@@ -82,17 +82,25 @@
 				</td>
 				<td>
 					<h1>Bookmarklets</h1>
-					<h3>drag them into your bookmarks bar to install<br>Then click them to run them</h3>
-					<a href="javascript:var src = prompt('url', 'https://'); var win = window.open('', 'MsgWindow', 'height=1000, width=1000, location=no'); var content = win.document.createElement('iframe');content.style.width='100%'; content.style.height='100%'; content.style.border = 'none'; content.style.position='fixed'; content.style.top='0px'; content.style.left='0px'; content.src = src; win.document.body.appendChild(content);">incognito</a>
-					<p>this opens a new window that cannot be tracked by goguardian, and unblocks a site</p><br>
+					<h3>drag them into your bookmarks bar to install<br>Then click them to run them<br>(hover over each link for more information)</h3>
+					<a title="this opens a new window that cannot be tracked by goguardian, and unblocks a site" href="javascript:var src = prompt('url', 'https://'); var win = window.open('', 'MsgWindow', 'height=1000, width=1000, location=no'); var content = win.document.createElement('iframe');content.style.width='100%'; content.style.height='100%'; content.style.border = 'none'; content.style.position='fixed'; content.style.top='0px'; content.style.left='0px'; content.src = src; win.document.body.appendChild(content);">incognito</a>
+					<br>
 					
-					<a href="javascript:var xp=document.createElement('iframe');xp.id='mainiframe';xp.src=decodeURIComponent('https://' + window.document.location.href.replace('http://blocked.com-default.ws/?oI=14829618804&type=chromium-m&url=', ''));xp.style.position='fixed';xp.style.opacity='1';xp.style.top='0%';xp.style.left='0%';xp.style.height='100%';xp.style.width='100%';xp.style.border='none';xp.style.background='white';xp.style.zIndex=999;document.body.appendChild(xp);">Unblock</a>
-					<p>run this on blocked.com to unblock the site</p><br>
+					<a title="run this on blocked.com to unblock the site" href="javascript:var xp=document.createElement('iframe');xp.id='mainiframe';xp.src=decodeURIComponent('https://' + window.document.location.href.replace('http://blocked.com-default.ws/?oI=14829618804&type=chromium-m&url=', ''));xp.style.position='fixed';xp.style.opacity='1';xp.style.top='0%';xp.style.left='0%';xp.style.height='100%';xp.style.width='100%';xp.style.border='none';xp.style.background='white';xp.style.zIndex=999;document.body.appendChild(xp);">Unblock</a>
+					<br>
 					
-					<a href="javascript:window.onbeforeunload = event => {  event.preventDefault();  event.returnValue = '';}">decloser</a>
-					<p>prevents goGuardian from closing tabs</p>
+					<a title="prevents goGuardian from closing tabs" href="javascript:window.onbeforeunload = event => {  event.preventDefault();  event.returnValue = '';}">decloser</a>
+					<br>
 					
-					<h5>These are not gerunteed to work, use them at your own risk</h5>
+					<a title="same as Unblock, but this one blocks popups" href="javascript:var xp=document.createElement('iframe');xp.id='mainiframe';xp.src=decodeURIComponent('https://' + window.document.location.href.replace('http://blocked.com-default.ws/?oI=14829618804&type=chromium-m&url=', ''));xp.style.position='fixed';xp.style.opacity='1';xp.style.top='0%';xp.style.left='0%';xp.style.height='100%';xp.style.width='100%';xp.style.border='none';xp.style.background='white';xp.style.zIndex=999;xp.sandbox="allow-scripts allow-forms allow-same-origin allow-fullscreen";document.body.appendChild(xp);">Unblock-popup</a>
+					<br>
+					
+					<a title="same as Incognito, but this one blocks popups" href="javascript:var src = prompt('url', 'https://'); var win = window.open('', 'MsgWindow', 'height=1000, width=1000, location=no'); var content = win.document.createElement('iframe');content.style.width='100%'; content.style.height='100%'; content.style.border = 'none'; content.style.position='fixed'; content.style.top='0px'; content.style.left='0px'; content.src = src;content.sandbox="allow-scripts allow-forms allow-same-origin"; win.document.body.appendChild(content);">Incognito-popup</a>
+					<br>
+					
+					<a title="grabs url from blocked.com-default.ws and displays it in an easy-to-copy format" href="javascript:prompt('url:',decodeURIComponent('https://' + window.document.location.href.replace('http://blocked.com-default.ws/?oI=14829618804&type=chromium-m&url=', '')));">Steal Restricted url</a>
+					
+					<h5>These are not guaranteed to work, use them at your own risk</h5>
 				<td>
 			</table>
 		</div>
